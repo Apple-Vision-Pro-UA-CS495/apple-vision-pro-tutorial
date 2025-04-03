@@ -2,9 +2,9 @@
 
 # -- Project information
 
-project = 'Lumache'
-copyright = '2021, Graziella'
-author = 'Graziella'
+project = 'Apple Vision Pro'
+copyright = '2025, UA Apple Vision Pro Team'
+author = 'UA Apple Vision Pro Team'
 
 release = '0.1'
 version = '0.1.0'
