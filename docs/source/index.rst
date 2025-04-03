@@ -1,10 +1,7 @@
-Welcome to Lumache's documentation!
+Welcome to Apple Vision Pro CS495's documentation!
 ===================================
 
-**Lumache** (/lu'make/) is a Python library for cooks and food lovers
-that creates recipes mixing random ingredients.
-It pulls data from the `Open Food Facts database <https://world.openfoodfacts.org/>`_
-and offers a *simple* and *intuitive* API.
+**Apple Vision Pro Project** is the Capstone project for the University of Alabama CS495 class during Spring 2025. Our project is about creating a visionOS app which allows users to upload or capture an image from the Apple Vision Pro and send it to AWS EC2 where Hugging Face models will be applied to detect objects in an image. You can find the project website [here](https://apple-vision-pro-ua-cs495.github.io/project-website/).
 
 Check out the :doc:`usage` section for further information, including
 how to :ref:`installation` the project.
