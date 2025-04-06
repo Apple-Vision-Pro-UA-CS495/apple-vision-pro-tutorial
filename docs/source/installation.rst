@@ -19,6 +19,6 @@ Install Xcode and visionOS Simulator
 # Once Xcode is installed, launch the Xcode and a dialog will appear to show which simulator runtime you may install. Select ``"visionOS"`` 
 with the most current version and click ``"Download & Install"`` button. 
 
-.. image:: /Xcode.png
+.. image:: docs/source/Xcode.png
   :width: 400
   :alt: Xcode and visionOS Simulator Installtion
