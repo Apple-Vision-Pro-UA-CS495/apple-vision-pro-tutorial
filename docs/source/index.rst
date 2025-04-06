@@ -15,6 +15,7 @@ Contents
 
 .. toctree::
 
+   installation
    usage
    api
    backend
