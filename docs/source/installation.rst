@@ -17,8 +17,7 @@ Install Xcode and visionOS Simulator
 
 #. To install Xcode, open App Store on your Mac and search for ``"Xcode"``. Then, click on ``"Get"`` button to download it. 
 
-#. Once Xcode is installed, launch the Xcode and a dialog will appear to show which simulator runtime you may install. Select ``"visionOS"`` 
-with the most current version and click ``"Download & Install"`` button. 
+#. Once Xcode is installed, launch the Xcode and a dialog will appear to show which simulator runtime you may install. Select ``"visionOS"`` with the most current version and click ``"Download & Install"`` button. 
 
 .. image:: /Xcode.png
   :width: 400
