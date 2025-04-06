@@ -17,5 +17,6 @@ Contents
 
    installation
    usage
-   api
+   modification
+   faqs
    backend
