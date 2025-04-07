@@ -59,15 +59,15 @@ Local Setup
 EC2 Setup
 ----------------
 
-#. Create an EC2 instance in AWS
+1. Create an EC2 instance in AWS
   - Recommend using t2.xlarge due to dependency size
   - Set a static IP address
   - Allow inbound traffic to port 8000, 22, and 443
-#. Start EC2 instance in AWS
-#. In terminal run: ``ssh -i {path_to_pem_file}\aws_pem.pem ec2-user@{IP_address}`` (This is for windows CMD)
-#. Move server file and requirements.txt from local into EC2 using SCP: ``scp -i {path_to_pem_file}\aws_pem.pem {path_to_file}\file ec2-user@{IP_address}``
-#. Install dependencies in EC2 using pip: ``pip install -r requirements.txt``
-#. Run: ``uvicorn server:app --host 0.0.0.0 --port 8000``
-#. Hit server with this link: wss://{IP address}:8000/wss
-#. When you are done, make sure to stop the server and stop the EC2 instance to save money
-#. For future use, can just spin up EC2 instance and ssh in and run uvicorn command to start up server again
+2. Start EC2 instance in AWS
+3. In terminal run: ``ssh -i {path_to_pem_file}\aws_pem.pem ec2-user@{IP_address}`` (This is for windows CMD)
+4. Move server file and requirements.txt from local into EC2 using SCP: ``scp -i {path_to_pem_file}\aws_pem.pem {path_to_file}\file ec2-user@{IP_address}``
+5. Install dependencies in EC2 using pip: ``pip install -r requirements.txt``
+6. Run: ``uvicorn server:app --host 0.0.0.0 --port 8000``
+7. Hit server with this link: wss://{IP address}:8000/wss
+8. When you are done, make sure to stop the server and stop the EC2 instance to save money
+9. For future use, can just spin up EC2 instance and ssh in and run uvicorn command to start up server again
