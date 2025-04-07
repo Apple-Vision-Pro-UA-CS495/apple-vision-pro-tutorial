@@ -44,7 +44,7 @@ Run the visionOS app
 #. Press Cmd + R or click the Run button in Xcode to build and run.
 
 Backend Setup Guide
-=================
+----------------
 
 This section provides a guide for getting the backend server up and running.
 
