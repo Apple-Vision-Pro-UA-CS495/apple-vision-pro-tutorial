@@ -42,3 +42,32 @@ Run the visionOS app
 #. Select visionOS simulator as the target device
 
 #. Press Cmd + R or click the Run button in Xcode to build and run.
+
+Backend Setup Guide
+=================
+
+This section provides a guide for getting the backend server up and running.
+
+Local Setup
+----------------
+
+#. Create Python virtual environment
+#. Install dependencies
+#. Use this command to run the server: ``uvicorn server:app --host 0.0.0.0 --port 8000 --reload``
+#. Run the client file to test
+
+EC2 Setup
+----------------
+
+#. Create an EC2 instance in AWS
+  - Recommend using t2.xlarge due to dependency size
+  - Set a static IP address
+  - Allow inbound traffic to port 8000, 22, and 443
+#. Start EC2 instance in AWS
+#. In terminal run: ``ssh -i {path_to_pem_file}\aws_pem.pem ec2-user@{IP_address}`` (This is for windows CMD)
+#. Move server file and requirements.txt from local into EC2 using SCP: ``scp -i {path_to_pem_file}\aws_pem.pem {path_to_file}\file ec2-user@{IP_address}``
+#. Install dependencies in EC2 using pip: ``pip install -r requirements.txt``
+#. Run: ``uvicorn server:app --host 0.0.0.0 --port 8000``
+#. Hit server with this link: wss://{IP address}:8000/wss
+#. When you are done, make sure to stop the server and stop the EC2 instance to save money
+#. For future use, can just spin up EC2 instance and ssh in and run uvicorn command to start up server again
