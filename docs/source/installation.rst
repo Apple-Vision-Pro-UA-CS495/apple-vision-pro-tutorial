@@ -53,8 +53,12 @@ Local Setup
 
 #. Create Python virtual environment
 #. Install dependencies
-#. Use this command to run the server: ``uvicorn server:app --host 0.0.0.0 --port 8000 --reload``
-#. Run the client file to test
+#. Use this command to run the server: 
+.. code-block:: console
+
+   uvicorn server:app --host 0.0.0.0 --port 8000 --reload
+
+#. Run the ``client.py`` file to test
 
 EC2 Setup
 ----------------
@@ -63,12 +67,33 @@ EC2 Setup
   - Recommend using t2.xlarge due to dependency size
   - Set a static IP address
   - Allow inbound traffic to port 8000, 22, and 443
+
 2. Start EC2 instance in AWS
-3. In terminal run: ``ssh -i {path_to_pem_file}\aws_pem.pem ec2-user@{IP_address}`` (This is for windows CMD)
-4. Download server file and requirements.txt from our data processing repo
-5. Move these files from local into EC2 using SCP: ``scp -i {path_to_pem_file}\aws_pem.pem {path_to_file}\file ec2-user@{IP_address}``
-6. Install dependencies in EC2 using pip: ``pip install -r requirements.txt``
-7. Run: ``uvicorn server:app --host 0.0.0.0 --port 8000``
-8. Hit server with this link: wss://{IP address}:8000/wss
+
+3. In terminal run: 
+.. code-block:: console
+
+   ssh -i {path_to_pem_file}\aws_pem.pem ec2-user@{IP_address} 
+
+(This is for windows CMD)
+4. Download ``server.py`` file and ``requirements.txt`` from our `data processing repo <https://github.com/Apple-Vision-Pro-UA-CS495/data-processing-main/>`_
+
+5. Move these files from local into EC2 using SCP:
+.. code-block:: console
+
+   scp -i {path_to_pem_file}\aws_pem.pem {path_to_file}\file ec2-user@{IP_address}
+
+6. Install dependencies in EC2 using pip: 
+.. code-block:: console
+
+   pip install -r requirements.txt
+
+7. Run: 
+.. code-block:: console
+   uvicorn server:app --host 0.0.0.0 --port 8000
+
+8. Hit server with this link: ``wss://{IP address}:8000/wss``
+
 9. When you are done, make sure to stop the server and stop the EC2 instance to save money
+
 10. For future use, can just spin up EC2 instance and ssh in and run uvicorn command to start up server again
