@@ -78,6 +78,7 @@ EC2 Setup
    ssh -i {path_to_pem_file}\aws_pem.pem ec2-user@{IP_address} 
 
 (This is for windows CMD)
+
 4. Download ``server.py`` file and ``requirements.txt`` from our `data processing repo <https://github.com/Apple-Vision-Pro-UA-CS495/data-processing-main/>`_
 
 5. Move these files from local into EC2 using SCP:
