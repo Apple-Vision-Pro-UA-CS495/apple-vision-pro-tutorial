@@ -54,6 +54,7 @@ Local Setup
 #. Create Python virtual environment
 #. Install dependencies
 #. Use this command to run the server: 
+
 .. code-block:: console
 
    uvicorn server:app --host 0.0.0.0 --port 8000 --reload
@@ -71,6 +72,7 @@ EC2 Setup
 2. Start EC2 instance in AWS
 
 3. In terminal run: 
+
 .. code-block:: console
 
    ssh -i {path_to_pem_file}\aws_pem.pem ec2-user@{IP_address} 
@@ -79,17 +81,21 @@ EC2 Setup
 4. Download ``server.py`` file and ``requirements.txt`` from our `data processing repo <https://github.com/Apple-Vision-Pro-UA-CS495/data-processing-main/>`_
 
 5. Move these files from local into EC2 using SCP:
+
 .. code-block:: console
 
    scp -i {path_to_pem_file}\aws_pem.pem {path_to_file}\file ec2-user@{IP_address}
 
 6. Install dependencies in EC2 using pip: 
+
 .. code-block:: console
 
    pip install -r requirements.txt
 
 7. Run: 
+
 .. code-block:: console
+
    uvicorn server:app --host 0.0.0.0 --port 8000
 
 8. Hit server with this link: ``wss://{IP address}:8000/wss``
