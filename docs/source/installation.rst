@@ -34,19 +34,78 @@ Install visionOS App: Discover
 
    git clone https://github.com/Apple-Vision-Pro-UA-CS495/apple-vision-pro-main.git
 
+Install the Dependency in the visionOS App
+----------------
+
+#. Add the Lottie Library to the app
+
+  * Copy this link: https://github.com/airbnb/lottie-spm
+
+  * Follow this GIF to add the dependency
+
+.. image:: /gifs/Add Dependency.gif
+  :width: 400
+  :alt: Add Dependency
+
 Run the visionOS app
 ----------------
 
-#. Open ``"Discover.xcodeproj"`` in Xcode
+#. Start the AWS EC2 Instance
 
-#. Select visionOS simulator as the target device
+.. image:: /gifs/Start Instance.gif
+  :width: 400
+  :alt: Start the AWS EC2 Instance GIFs
 
-#. Press Cmd + R or click the Run button in Xcode to build and run.
+#. Start the server
+
+  * For Windows, run this command in the terminal
+
+.. code-block:: console
+
+   ssh -i {path_to_pem_file}\aws_pem.pem ec2-user@{IP_address} 
+   cd app
+   uvicorn server:app --host 0.0.0.0 --port 8000
+
+  * For Mac, run this command in the terminal
+
+.. code-block:: console
+
+   ssh -i {path_to_pem_file}/aws_pem.pem ec2-user@{IP_address} 
+   cd app
+   uvicorn server:app --host 0.0.0.0 --port 8000
+
+.. image:: /gifs/Start the server.gif
+  :width: 400
+  :alt: Start the server GIF
+
+#. Start visionOS app
+
+  * Open ``"Discover.xcodeproj"`` in Xcode
+
+.. image:: /gifs/Discover.xcodeproj.png
+  :width: 400
+  :alt: Discover.xcodeproj file
+
+  * Make sure the OpenAI API Key is in the Scheme. If it is not, then add the API Key
+
+.. image:: /gifs/Add OpenAI Key.gif
+  :width: 400
+  :alt: Add the OpenAI Key
+
+  * Select visionOS simulator as the target device
+
+  * Press Cmd + R or click the Run button in Xcode to build and run.
+
+.. image:: /gifs/Start the app.gif
+  :width: 400
+  :alt: Start the visionOS app GIF
+
+#. When you are done, make sure to stop the server and stop the EC2 instance to save money
 
 Backend Setup Guide
 ----------------
 
-This section provides a guide for getting the backend server up and running.
+This section provides a guide for when you want to create a ``new`` EC2 Instance and get it up and running. 
 
 Local Setup
 ----------------
@@ -64,45 +123,63 @@ Local Setup
 EC2 Setup
 ----------------
 
-1. Create an EC2 instance in AWS
-  - Recommend using t2.xlarge due to dependency size
-  - Set a static IP address
-  - Allow inbound traffic to port 8000, 22, and 443
+#. Create an EC2 instance in AWS
+  * Recommend using t2.xlarge due to dependency size
+  * Set a static IP address
+  * Allow inbound traffic to port 8000, 22, and 443
 
-2. Start EC2 instance in AWS
+#. Start EC2 instance in AWS
 
-3. In terminal run: 
+#. In terminal run: 
+
+  * For Windows
 
 .. code-block:: console
 
    ssh -i {path_to_pem_file}\aws_pem.pem ec2-user@{IP_address} 
 
-(This is for windows CMD)
+  * For Mac
 
-4. Download ``server.py`` file and ``requirements.txt`` from our `data processing repo <https://github.com/Apple-Vision-Pro-UA-CS495/data-processing-main/>`_
+.. code-block:: console
 
-5. Move these files from local into EC2 using SCP:
+   ssh -i {path_to_pem_file}/aws_pem.pem ec2-user@{IP_address} 
+
+#. Download ``server.py`` file and ``requirements.txt`` from our `data processing repo <https://github.com/Apple-Vision-Pro-UA-CS495/data-processing-main/>`_
+
+#. Move these files from local into EC2 using SCP:
 
 .. code-block:: console
 
    scp -i {path_to_pem_file}\aws_pem.pem {path_to_file}\file ec2-user@{IP_address}
 
-6. Install dependencies in EC2 using pip: 
+#. Install dependencies in EC2 using pip: 
 
 .. code-block:: console
 
    pip install -r requirements.txt
 
-7. Run: 
+#. Run: 
 
 .. code-block:: console
 
    uvicorn server:app --host 0.0.0.0 --port 8000
 
-8. Hit server with this link: ``ws://{IP address}:8000/ws``
+#. Hit server with this link: ``ws://{IP address}:8000/ws``
 
-9. When you are done, make sure to stop the server and stop the EC2 instance to save money
+#. When you are done, make sure to stop the server and stop the EC2 instance to save money
 
-10. For future use, can just spin up EC2 instance and ssh in and run uvicorn command to start up server again
+#. For future use, can just spin up EC2 instance and ssh in and run uvicorn command to start up server again
 
-To run tests in EC2, move test.py into EC2. Install pytest using pip: ``pip install pytest``. Then run: ``pytest test.py``
+#. Run tests in EC2, move test.py into EC2. 
+
+  * Install pytest using pip:
+
+.. code-block:: console
+
+   pip install pytest
+
+  * Then run:
+
+.. code-block:: console
+
+   pytest test.py
