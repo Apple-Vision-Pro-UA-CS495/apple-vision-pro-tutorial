@@ -99,7 +99,7 @@ EC2 Setup
 
    uvicorn server:app --host 0.0.0.0 --port 8000
 
-8. Hit server with this link: ``wss://{IP address}:8000/wss``
+8. Hit server with this link: ``ws://{IP address}:8000/ws``
 
 9. When you are done, make sure to stop the server and stop the EC2 instance to save money
 
