@@ -43,9 +43,9 @@ Install the Dependency in the visionOS App
 
   * Follow this GIF to add the dependency
 
-.. image:: /gifs/Add Dependency.gif
-  :width: 400
-  :alt: Add Dependency
+  .. image:: /gifs/Add Dependency.gif
+    :width: 400
+    :alt: Add Dependency
 
 Run the visionOS app
 ----------------
@@ -60,45 +60,45 @@ Run the visionOS app
 
   * For Windows, run this command in the terminal
 
-.. code-block:: console
-
-   ssh -i {path_to_pem_file}\aws_pem.pem ec2-user@{IP_address} 
-   cd app
-   uvicorn server:app --host 0.0.0.0 --port 8000
+   .. code-block:: console
+   
+      ssh -i {path_to_pem_file}\aws_pem.pem ec2-user@{IP_address} 
+      cd app
+      uvicorn server:app --host 0.0.0.0 --port 8000
 
   * For Mac, run this command in the terminal
 
-.. code-block:: console
-
-   ssh -i {path_to_pem_file}/aws_pem.pem ec2-user@{IP_address} 
-   cd app
-   uvicorn server:app --host 0.0.0.0 --port 8000
-
-.. image:: /gifs/Start the server.gif
-  :width: 400
-  :alt: Start the server GIF
+   .. code-block:: console
+   
+      ssh -i {path_to_pem_file}/aws_pem.pem ec2-user@{IP_address} 
+      cd app
+      uvicorn server:app --host 0.0.0.0 --port 8000
+   
+   .. image:: /gifs/Start the server.gif
+     :width: 400
+     :alt: Start the server GIF
 
 #. Start visionOS app
 
   * Open ``"Discover.xcodeproj"`` in Xcode
 
-.. image:: /gifs/Discover.xcodeproj.png
-  :width: 400
-  :alt: Discover.xcodeproj file
+   .. image:: /gifs/Discover.xcodeproj.png
+     :width: 400
+     :alt: Discover.xcodeproj file
 
   * Make sure the OpenAI API Key is in the Scheme. If it is not, then add the API Key
 
-.. image:: /gifs/Add OpenAI Key.gif
-  :width: 400
-  :alt: Add the OpenAI Key
+   .. image:: /gifs/Add OpenAI Key.gif
+     :width: 400
+     :alt: Add the OpenAI Key
 
   * Select visionOS simulator as the target device
 
   * Press Cmd + R or click the Run button in Xcode to build and run.
 
-.. image:: /gifs/Start the app.gif
-  :width: 400
-  :alt: Start the visionOS app GIF
+   .. image:: /gifs/Start the app.gif
+     :width: 400
+     :alt: Start the visionOS app GIF
 
 #. When you are done, make sure to stop the server and stop the EC2 instance to save money
 
@@ -114,9 +114,9 @@ Local Setup
 #. Install dependencies
 #. Use this command to run the server: 
 
-.. code-block:: console
-
-   uvicorn server:app --host 0.0.0.0 --port 8000 --reload
+ .. code-block:: console
+ 
+    uvicorn server:app --host 0.0.0.0 --port 8000 --reload
 
 #. Run the ``client.py`` file to test
 
@@ -134,35 +134,35 @@ EC2 Setup
 
   * For Windows
 
-.. code-block:: console
-
-   ssh -i {path_to_pem_file}\aws_pem.pem ec2-user@{IP_address} 
+   .. code-block:: console
+   
+      ssh -i {path_to_pem_file}\aws_pem.pem ec2-user@{IP_address} 
 
   * For Mac
 
-.. code-block:: console
-
-   ssh -i {path_to_pem_file}/aws_pem.pem ec2-user@{IP_address} 
+   .. code-block:: console
+   
+      ssh -i {path_to_pem_file}/aws_pem.pem ec2-user@{IP_address} 
 
 #. Download ``server.py`` file and ``requirements.txt`` from our `data processing repo <https://github.com/Apple-Vision-Pro-UA-CS495/data-processing-main/>`_
 
 #. Move these files from local into EC2 using SCP:
 
-.. code-block:: console
-
-   scp -i {path_to_pem_file}\aws_pem.pem {path_to_file}\file ec2-user@{IP_address}
+  .. code-block:: console
+  
+     scp -i {path_to_pem_file}\aws_pem.pem {path_to_file}\file ec2-user@{IP_address}
 
 #. Install dependencies in EC2 using pip: 
 
-.. code-block:: console
-
-   pip install -r requirements.txt
+ .. code-block:: console
+ 
+    pip install -r requirements.txt
 
 #. Run: 
 
-.. code-block:: console
-
-   uvicorn server:app --host 0.0.0.0 --port 8000
+ .. code-block:: console
+ 
+    uvicorn server:app --host 0.0.0.0 --port 8000
 
 #. Hit server with this link: ``ws://{IP address}:8000/ws``
 
@@ -174,12 +174,12 @@ EC2 Setup
 
   * Install pytest using pip:
 
-.. code-block:: console
-
-   pip install pytest
+   .. code-block:: console
+   
+      pip install pytest
 
   * Then run:
 
-.. code-block:: console
-
-   pytest test.py
+   .. code-block:: console
+   
+      pytest test.py
