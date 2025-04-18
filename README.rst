@@ -1,9 +1,4 @@
-Template for the Read the Docs tutorial
+Apple Vision Pro Documentation Website
 =======================================
 
-This GitHub template includes fictional Python library
-with some basic Sphinx docs.
-
-Read the tutorial here:
-
-https://docs.readthedocs.io/en/stable/tutorial/
+This is the documentation website relating to the Apple Vision Pro Project. It is based on Read the Docs Tutorial

@@ -38,3 +38,7 @@ html_static_path = ['_static']
 
 html_extra_path = ['_static']
 
+rst_prolog = """
+.. role:: raw-html(raw)
+    :format: html
+"""
