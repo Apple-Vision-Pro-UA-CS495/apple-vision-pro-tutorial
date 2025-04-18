@@ -43,7 +43,7 @@ Install the Dependency in the visionOS App
    - Copy this link: https://github.com/airbnb/lottie-spm  
    - Follow this GIF to add the dependency
 
-     .. image:: /gifs/Add Dependency.gif
+     .. image:: /_static/gifs/Add Dependency.gif
         :width: 400
         :alt: Add Dependency
 
@@ -52,7 +52,7 @@ Run the visionOS app
 
 #. Start the AWS EC2 Instance
 
-   .. image:: /gifs/Start Instance.gif
+   .. image:: /_static/gifs/Start Instance.gif
       :width: 400
       :alt: Start the AWS EC2 Instance GIFs
 
@@ -74,7 +74,7 @@ Run the visionOS app
         cd app
         uvicorn server:app --host 0.0.0.0 --port 8000
 
-     .. image:: /gifs/Start the server.gif
+     .. image:: /_static/gifs/Start the server.gif
         :width: 400
         :alt: Start the server GIF
 
@@ -82,20 +82,20 @@ Run the visionOS app
 
    - Open ``"Discover.xcodeproj"`` in Xcode
 
-     .. image:: /gifs/Discover.xcodeproj.png
+     .. image:: /_static/gifs/Discover.xcodeproj.png
         :width: 400
         :alt: Discover.xcodeproj file
 
    - Make sure the OpenAI API Key is in the Scheme. If it is not, then add the API Key
 
-     .. image:: /gifs/Add OpenAI Key.gif
+     .. image:: /_static/gifs/Add OpenAI Key.gif
         :width: 400
         :alt: Add the OpenAI Key
 
    - Select visionOS simulator as the target device  
    - Press Cmd + R or click the Run button in Xcode to build and run
 
-     .. image:: /gifs/Start the app.gif
+     .. image:: /_static/gifs/Start the app.gif
         :width: 400
         :alt: Start the visionOS app GIF
 
