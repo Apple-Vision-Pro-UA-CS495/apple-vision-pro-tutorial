@@ -104,3 +104,5 @@ EC2 Setup
 9. When you are done, make sure to stop the server and stop the EC2 instance to save money
 
 10. For future use, can just spin up EC2 instance and ssh in and run uvicorn command to start up server again
+
+To run tests in EC2, move test.py into EC2. Install pytest using pip: ``pip install pytest``. Then run: ``pytest test.py``
