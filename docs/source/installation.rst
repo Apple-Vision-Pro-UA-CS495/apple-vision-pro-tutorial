@@ -171,7 +171,7 @@ EC2 Setup
 
 #. For future use, you can just spin up the EC2 instance, ssh in, and run the uvicorn command to start the server again
 
-#. Run tests in EC2: move ``test.py`` into EC2
+#. Run tests in EC2: move ``test.py`` into EC2 (tests not meant to be run with server2.py)
 
    - Then run:
 
