@@ -7,13 +7,13 @@ Usage
 Features
 ***************
 
-- Display a splash view when the app is loaded at the first time 
+- Display a splash view when the app is loaded for the first time.
 
     .. image:: /_static/gifs/Splash_View.gif
         :width: 800
         :alt: Splash Screen
 
-- Select an image from Photo app and send selected image to AWS EC2 instance via WebSocket. Then, receive response and display result to the Apple Vision Pro 
+- Select an image from the Photo app and send the selected image to AWS EC2 instance via WebSocket. Then, receive response and display the result to the Apple Vision Pro.
 
     .. image:: /_static/gifs/Photo_Feature.gif
         :width: 800
@@ -24,8 +24,6 @@ Features
     .. image:: /_static/gifs/SpeechRecognition.gif
         :width: 800
         :alt: Speech Recognition and OpenAI Connection
-
-Assuming AWS EC2 instance is already running
 
 ***************
 How to Use
