@@ -104,7 +104,7 @@ Run the visionOS app
 Backend Setup Guide
 -------------------
 
-This section provides a guide for when you want to create a ``new`` EC2 Instance and get it up and running.
+This section provides a guide for when you want to create a new EC2 Instance and get it up and running.
 
 Local Setup
 -----------
