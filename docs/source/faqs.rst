@@ -3,8 +3,8 @@ FAQs
 
 | **Question: Can I change the model being ran?**
 | **Answer:** 
-| From the app, no you cannot change which model is used, but in general yes. To change the model, change the model name in the server.py file and upload the update server.py to the EC2 instance. Then start      | server with updated code and the new model will be used. Alternatively copy the server.py file and change the model name then upload the newfile to the EC2 instance then you can change which model is used 
-| simply by choosing which program to run when starting server.
+| From the app, no you cannot change which model is used, but in general yes. To change the model, change the model name in the server.py file and upload the update server.py to the EC2 instance. Then start      server with updated code and the new model will be used. Alternatively copy the server.py file and change the model name then upload the newfile to the EC2 instance then you can change which model is used 
+simply by choosing which program to run when starting server.
 |  
 
 | **Question: I tried using the app but the picture are not getting feedback, how can I fix this?**
