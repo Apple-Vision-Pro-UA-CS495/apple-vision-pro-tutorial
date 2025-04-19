@@ -173,12 +173,6 @@ EC2 Setup
 
 #. Run tests in EC2: move ``test.py`` into EC2
 
-   - Install pytest using pip:
-
-     .. code-block:: console
-
-        pip install pytest
-
    - Then run:
 
      .. code-block:: console
