@@ -54,7 +54,7 @@ The backlog is on **GitHub Projects** → *CS 495 – Apple Vision Pro*.
 Style Expectations
 ------------------
 
-- Use only the animations that ship with the **Lottie** dependency.
+- Can use animations that ship with the **Lottie** dependency.
 - Follow the project’s architecture / coding‑style rules.
 
 Tests
