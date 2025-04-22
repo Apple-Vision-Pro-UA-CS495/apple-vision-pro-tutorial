@@ -1,81 +1,77 @@
-Modification/Extension
-======================
+Modification / Extension
+========================
 
-***************
-Front End Modifications
-***************
+Front‑End Modifications / Extensions
+------------------------------------
 
-.. details:: Click to expand Front End Modifications
-    :open: true  # Remove this line if you want it collapsed by default
+1. **Implement Main Camera usage to take pictures in real time**
 
-    1. **Implement Main Camera Usage to Take Pictures in Real-Time**
-       - Get **Apple Developer** access.
-       - Create a new file for **Main Camera** code.
-       - Create a new file for the **view** of the Main Camera.
+   - Obtain **Apple Developer** access.  
+   - Create a file that contains the **Main Camera** code.  
+   - Create a view file that presents the Main Camera output.
 
-    2. **Have Vision Pro Read Response Back from OpenAI**
-       - Use **AVSpeechSynthesizer** to have Vision Pro read aloud the response from OpenAI.
+2. **Have Vision Pro read responses from OpenAI**
 
-    3. **Change OpenAI Model**
-       - In the **Discover app** inside the **Views** file, there is a file named `OpenAIService` where you can change the model from `"gpt-4o"` to the desired OpenAI model.
+   - Use **AVSpeechSynthesizer** to speak the assistant’s reply aloud.
 
-    4. **Change AI Model**
-       - You could use other AI models like **Claude**, **Deepseek**, or **Gemini**.
+3. **Change the OpenAI model**
 
-    5. **Get Voice and Image Selections to Work Together and Implement with PuppyPy**
-       - Ensure that both the voice and image functionalities work in tandem and integrate them with the **PuppyPy** project.
+   - In the *Discover* app, open `Views/OpenAIService` and replace  
+     `"gpt-4o"` with the desired model name.
 
-***************
-Back End Modifications
-***************
+4. **Use a different AI provider**
 
-.. details:: Click to expand Back End Modifications
+   - Possible alternatives: **Claude**, **DeepSeek**, **Gemini**, …  
 
-    1. **Change the Learning Model**
-       - In the `data-processing-main`, the model is named `"google/vit-base-patch16-224"` in the file `server2.py`.
-       - Replace the model name with the desired Hugging Face model from **Image Classification**:  
-         `https://huggingface.co/models?sort=trending`
+5. **Combine voice and image pipelines, then integrate with PuppyPy**
 
-***************
+   - Make sure voice‑originating queries and image selections work together.
+
+Back‑End Modifications / Extensions
+-----------------------------------
+
+1. **Replace the image‑classification model**
+
+   - File: `data-processing-main/server2.py`  
+     Current model → `"google/vit-base-patch16-224"`
+   - Pick any Hugging Face *image‑classification* model:  
+     https://huggingface.co/models?sort=trending  
+   - Change the string and restart the server.
+
 Dependencies
-***************
+------------
 
-.. details:: Click to expand Dependencies
+1. After installing the app, the **Lottie** library appears under  
+   *Package Dependencies* in Xcode.
 
-    1. After installing the application, the **Lottie Library** will be located in the **Package dependencies** on the left side of XCode.
-    2. In `data-processing-main`, there are `requirements.txt` and `requirements2.txt` for the backend.
+2. Back‑end Python packages are listed in  
+   `data-processing-main/requirements.txt` and `requirements2.txt`.
 
-***************
 Backlog
-***************
+-------
 
-.. details:: Click to expand Backlog
+The backlog is maintained in **GitHub Projects**:
 
-    - The backlog is located in our **GitHub**.
-    - Go to **Projects**, click on **CS 495 - Apple Vision Pro**, and the backlog will appear.
+*Navigate → Projects → **CS 495 – Apple Vision Pro***.
 
-***************
 Style Expectations
-***************
+------------------
 
-.. details:: Click to expand Style Expectations
+* Use only animations that ship with the **Lottie** dependency.  
+* Follow the project’s architecture / coding‑style guidelines.
 
-    - Any other animations should be used from the **Lottie Library** dependency downloaded.
-    - Follow **architecture styles**.
-
-***************
 Tests
-***************
+-----
 
-.. details:: Click to expand Tests
+### Front end
 
-    1. **Front End**:
-       - **Discover Tests** goes here.
-       - **No framework for visionOS**, so only **logical testing** is allowed (unit testing is not supported).
+VisionOS currently has **no unit‑test framework**; perform logic / manual testing only.
 
-    2. **Back End**:
-       - Open a new bash shell and run `source .venv/Scripts/activate` to activate the virtual environment.
-       - Run the `test.py` file from the virtual environment using:
-         ```bash
-         pytest test.py -v
-         ```
+### Back end
+
+Activate the virtual environment and run `pytest`:
+
+.. code-block:: console
+
+   $ source .venv/Scripts/activate
+   $ pytest test.py -v
