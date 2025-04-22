@@ -1,10 +1,10 @@
+.. _modification_extension:
+
 Modification/Extension
 ======================
 
-.. _front_end_modifications:
-
 ***************
-Front End Modifications
+Front End Modifications/Extensions
 ***************
 
 .. details:: Click to expand Front End Modifications
@@ -27,10 +27,8 @@ Front End Modifications
     5. **Get Voice and Image Selections to Work Together and Implement with PuppyPy**
        - Ensure that both the voice and image functionalities work in tandem and integrate them with the **PuppyPy** project.
 
-.. _back_end_modifications:
-
 ***************
-Back End Modifications
+Back End Modifications/Extensions
 ***************
 
 .. details:: Click to expand Back End Modifications
@@ -39,8 +37,6 @@ Back End Modifications
        - In the `data-processing-main`, the model is named `"google/vit-base-patch16-224"` in the file `server2.py`.
        - Replace the model name with the desired Hugging Face model from **Image Classification**:  
          `https://huggingface.co/models?sort=trending`
-
-.. _dependencies:
 
 ***************
 Dependencies
@@ -51,8 +47,6 @@ Dependencies
     1. After installing the application, the **Lottie Library** will be located in the **Package dependencies** on the left side of XCode.
     2. In `data-processing-main`, there are `requirements.txt` and `requirements2.txt` for the backend.
 
-.. _backlog:
-
 ***************
 Backlog
 ***************
@@ -62,8 +56,6 @@ Backlog
     - The backlog is located in our **GitHub**.
     - Go to **Projects**, click on **CS 495 - Apple Vision Pro**, and the backlog will appear.
 
-.. _style_expectations:
-
 ***************
 Style Expectations
 ***************
@@ -72,8 +64,6 @@ Style Expectations
 
     - Any other animations should be used from the **Lottie Library** dependency downloaded.
     - Follow **architecture styles**.
-
-.. _tests:
 
 ***************
 Tests
