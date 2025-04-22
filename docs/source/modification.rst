@@ -1,14 +1,12 @@
-.. _modification_extension:
-
 Modification/Extension
 ======================
 
 ***************
-Front End Modifications/Extensions
+Front End Modifications
 ***************
 
 .. details:: Click to expand Front End Modifications
-    :open: true
+    :open: true  # Remove this line if you want it collapsed by default
 
     1. **Implement Main Camera Usage to Take Pictures in Real-Time**
        - Get **Apple Developer** access.
@@ -28,7 +26,7 @@ Front End Modifications/Extensions
        - Ensure that both the voice and image functionalities work in tandem and integrate them with the **PuppyPy** project.
 
 ***************
-Back End Modifications/Extensions
+Back End Modifications
 ***************
 
 .. details:: Click to expand Back End Modifications
@@ -81,4 +79,3 @@ Tests
          ```bash
          pytest test.py -v
          ```
-
