@@ -68,15 +68,12 @@ Unit Testing
 
    - visionOS currently does not support ``UI Testing Bundle``, it only has ``Unit Testing Bundle`` so we can only perform logical testing only.
 
-   - To run test cases, follow the instructions below:
+   - To run test cases, click on the diamond icon alongside the function declaration in the editor gutter as below
 
      .. image:: /_static/gifs/OpenAITest.gif
         :width: 800
         :alt: OpenAI Connection Test
 
-     .. image:: /_static/gifs/Test_WebSocket.gif
-        :width: 800
-        :alt: WebSocket Connection Test
 
 #. Backend
 
